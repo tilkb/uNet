@@ -17,7 +17,7 @@ FCNet model1(Dataset &dataset){
 }
 
 FCNet model2(Dataset &dataset){
-    std::vector<int> neurons2{ 100, 10};
+    std::vector<int> neurons2{ 800, 10};
     std::vector<std::unique_ptr<uFunction>> activations2;
     activations2.push_back(std::unique_ptr<Sigmoid>(new Sigmoid()));
     activations2.push_back(std::unique_ptr<Softmax>(new Softmax()));

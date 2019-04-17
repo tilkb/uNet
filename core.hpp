@@ -103,6 +103,7 @@ public:
         float sum_loss=0.0;
         for (int i=0;i<predicted.row;i++){
             for (int j=0;j<predicted.column;j++){
+                // eliminate log0 problem
                 float pred=predicted(i,j);
                 if (pred<0.000001)
                     pred=0.000001;
